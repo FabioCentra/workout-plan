@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
@@ -9,6 +9,8 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import Home from "./components/Home";
+import {ThemeProvider} from "@mui/material";
+import globaltheme from "./theme/globaltheme";
 
 
 
@@ -31,9 +33,23 @@ const root = ReactDOM.createRoot(
 );
 
 
+const ThemeManager:FC<{children: JSX.Element}> = ({children}) => {
+
+  /**
+   * Utilizzo questa funzione per poter consentire lo switch del tema in futuro
+   */
+
+  const [theme] = useState(globaltheme);
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+
+}
+
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeManager>
+      <RouterProvider router={router}  />
+    </ThemeManager>
   </React.StrictMode>
 );
 
