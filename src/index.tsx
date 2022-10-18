@@ -1,15 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+import Home from "./components/Home";
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+    errorElement:<div>Sorry, an unexpected error has occurred</div>
+  },
+  {
+    path: "*",
+    element: <div>Pagina non trovata</div>
+  }
+]);
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
