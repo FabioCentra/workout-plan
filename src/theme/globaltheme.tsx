@@ -13,7 +13,7 @@ const globaltheme = createTheme({
       contrastText: grey[50],
     },
     secondary:{
-      light: pink[400],
+      light: "#EC008B",
       main: pink[800],
       dark: pink[900],
       contrastText: grey[50],
@@ -31,11 +31,35 @@ const globaltheme = createTheme({
       styleOverrides:{
         root:{
           border:"none",
-          borderRadius:"10px",
-          background: grey[800],
-          boxShadow:"5px 5px 16px -8px #F50057",
-          minWidth:"340px",
-          maxWidth:"410px"
+          borderRadius:"6px",
+          background: "white",
+          boxShadow:"5px 5px 18px -10px #F50057",
+          width:"100%",
+        },
+      }
+    },
+    MuiTypography: {
+      styleOverrides:{
+        h3:{
+          display: "block",
+          fontSize: "1.17em",
+          fontWeight: "bold",
+        },
+        h4:{
+          display: "block",
+          fontSize: "1em",
+          fontWeight: "bold",
+        }
+      }
+    },
+    MuiCheckbox:{
+      styleOverrides:{
+        root:{
+          color: "#EC008B",
+          '&.Mui-checked': {
+            color:"#EC008B",
+          },
+          '& .MuiSvgIcon-root': { fontSize: 28 }
         },
       }
     },
