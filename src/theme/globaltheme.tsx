@@ -26,6 +26,7 @@ const globaltheme = createTheme({
     },
   },
 
+
   components:{
     MuiCard:{
       styleOverrides:{
