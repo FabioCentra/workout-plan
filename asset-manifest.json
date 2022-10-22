@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/workout-plan/static/css/main.09b19210.css",
+    "main.js": "/workout-plan/static/js/main.951f7ea4.js",
+    "static/js/787.125d1c00.chunk.js": "/workout-plan/static/js/787.125d1c00.chunk.js",
+    "static/media/logo_bodyshape.webp": "/workout-plan/static/media/logo_bodyshape.e8af41350ebf16489363.webp",
+    "static/media/squat-al-multipower.png": "/workout-plan/static/media/squat-al-multipower.40b32e9345c8aa51365f.png",
+    "static/media/leg-extension-monopedalica.png": "/workout-plan/static/media/leg-extension-monopedalica.271039820c87e77da71c.png",
+    "static/media/distensioni-panca-piana.png": "/workout-plan/static/media/distensioni-panca-piana.39f71d29d5caf3c88a02.png",
+    "static/media/push-down-cavo-singolo.png": "/workout-plan/static/media/push-down-cavo-singolo.9bcd59e73bbc5a555d14.png",
+    "index.html": "/workout-plan/index.html",
+    "main.09b19210.css.map": "/workout-plan/static/css/main.09b19210.css.map",
+    "main.951f7ea4.js.map": "/workout-plan/static/js/main.951f7ea4.js.map",
+    "787.125d1c00.chunk.js.map": "/workout-plan/static/js/787.125d1c00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09b19210.css",
+    "static/js/main.951f7ea4.js"
+  ]
+}
