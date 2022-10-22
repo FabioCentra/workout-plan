@@ -52,7 +52,7 @@ const MyCard:FC<MyCardProps> = (props) => {
               </Box>
               <Box mb={"8px"} >
                 <Typography color={globaltheme.palette.primary.main} variant={"h3"}>{title}</Typography>
-                <Typography color={globaltheme.palette.primary.dark}>Ripetizioni: {description}</Typography>
+                <Typography color={globaltheme.palette.primary.dark}>Reps: {description}</Typography>
                 <Typography color={globaltheme.palette.primary.dark}>Recupero: {recovery} secondi</Typography>
               </Box>
             </Box>
