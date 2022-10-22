@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {Card, Checkbox, Typography} from "@mui/material";
 import Box from "@mui/material/Box";
 import globaltheme from "../theme/globaltheme";
@@ -10,6 +10,7 @@ interface MyCardProps {
   title?:string,
   description?: string,
   recovery?:string,
+  reset?: boolean,
 }
 
 
@@ -20,9 +21,19 @@ const MyCard:FC<MyCardProps> = (props) => {
     muscleGroup,
     title,
     description,
-    recovery
+    recovery,
+    reset
   }=props
 
+  const [checked, setChecked] = useState(false);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+  };
+
+
+  useEffect(() => {
+    setChecked(false)
+  },[reset])
 
   return (
     <Box>
@@ -37,7 +48,7 @@ const MyCard:FC<MyCardProps> = (props) => {
                 <Typography variant={"h4"} color={globaltheme.palette.secondary.light}>
                   {number}-{muscleGroup}
                 </Typography>
-                <Checkbox  />
+                <Checkbox checked={checked} onChange={handleChange} />
               </Box>
               <Box mb={"8px"} >
                 <Typography color={globaltheme.palette.primary.main} variant={"h3"}>{title}</Typography>
