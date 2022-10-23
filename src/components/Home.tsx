@@ -1,13 +1,12 @@
 import Box from '@mui/material/Box';
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useState} from 'react';
 import globaltheme from "../theme/globaltheme";
 import Logo from "../asset/logos/logo_bodyshape.webp"
 import MyCard from "./MyCard";
-import {Button, Divider, Menu, MenuItem} from "@mui/material";
+import {Button, Menu, MenuItem} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import {grey} from "@mui/material/colors";
 import {dayOne, dayTwo} from "../data/days";
-import {Datatype} from "../data/Datatype";
 
 interface HomeProps {}
 
@@ -68,7 +67,7 @@ const Home:FC<HomeProps> = () => {
 
       </Box>
 
-      <Box mt={"80px"}>
+      <Box mt={"80px"} mb={"20px"}>
         {day.map((element, index:any)=> <MyCard
           key={index}
           number={index+1}
